@@ -33,13 +33,22 @@ public class Snake extends Actor
             getWorld().removeObject(item);
             score += item.getScore();
             hud.setScore(score);
-            
-            if(getWorld().getObjects(Item.class).isEmpty()){
+            if(getWorld().getObjects(Rana.class).isEmpty()){
                 offsetX = 0;
                 offsetY = 0;
-                getWorld().showText("You Win", 3000, 200);
-                RecordsButton recordsButton = new RecordsButton();
-                getWorld().addObject(recordsButton,544,375);
+                getWorld().showText("You Win", 300, 200);
+                
+                Level2Button level2 = new Level2Button();
+                getWorld().addObject(level2,544,375);
+            }
+            
+            if(getWorld().getObjects(Bola.class).isEmpty()){
+                offsetX = 0;
+                offsetY = 0;
+                getWorld().showText("You Win", 300, 200);
+                
+                Level3Button level = new Level3Button();
+                getWorld().addObject(level,544,375);
             }
         }
     }

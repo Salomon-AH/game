@@ -1,19 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
-public class PlayWorld extends World
+public class Level2World extends World
 {
     private static final int WIDTH_WALL = 50;
     private static final int HEIGHT_WALL = 50;
-    
-    public PlayWorld()
+        
+    public Level2World()
     {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1044, 583, 1);  
-        this.showText("PlayWorld", 150,150);
+        this.showText("Level 2", 150,150);
         prepare();
     }
     
-    private void prepare(){
+     private void prepare(){
         Pared pared = new Pared();
         
         for(int x = 25; x <= 1000; x+= WIDTH_WALL){
@@ -37,16 +38,16 @@ public class PlayWorld extends World
         }
         
         Rana rana = new Rana();
-        addObject(rana, 200, 300);
+        addObject(rana, 0, 0);
         
         Hud hud = new Hud();
         addObject(hud, 0, 0);
         
         Snake snake = new Snake(hud);
-        addObject(snake, 70, 65);
+        addObject(snake, 500, 120);
         
         Bola bola = new Bola();
-        addObject(bola,0,0);
+        addObject(bola,200,300);
     }
     
     private Pared addPared(int x, int y){
@@ -56,3 +57,4 @@ public class PlayWorld extends World
         return pared;
     }
 }
+
