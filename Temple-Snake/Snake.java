@@ -38,6 +38,8 @@ public class Snake extends Actor
                 offsetX = 0;
                 offsetY = 0;
                 getWorld().showText("You Win", 3000, 200);
+                RecordsButton recordsButton = new RecordsButton();
+                getWorld().addObject(recordsButton,544,375);
             }
         }
     }
