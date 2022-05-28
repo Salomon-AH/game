@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-
-public class PlayWorld extends World
+public class Level3World extends World
 {
     private static final int WIDTH_WALL = 50;
     private static final int HEIGHT_WALL = 50;
     
-    public PlayWorld()
+    public Level3World()
     {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1044, 583, 1);  
-        this.showText("PlayWorld", 150,150);
+        this.showText("Level 3", 150,150);
         prepare();
     }
     
@@ -43,10 +43,7 @@ public class PlayWorld extends World
         addObject(hud, 0, 0);
         
         Snake snake = new Snake(hud);
-        addObject(snake, 70, 65);
-        
-        Bola bola = new Bola();
-        addObject(bola,0,0);
+        addObject(snake, 500, 120);
     }
     
     private Pared addPared(int x, int y){
