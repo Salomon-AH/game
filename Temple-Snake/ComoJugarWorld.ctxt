@@ -2,4 +2,6 @@
 comment0.target=ComoJugarWorld
 comment1.params=
 comment1.target=ComoJugarWorld()
-numComments=2
+comment2.params=
+comment2.target=void\ instructions()
+numComments=3
