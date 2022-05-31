@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class ComoJugarWorld extends World
 {
-
+    public static GreenfootSound howToPlayMusic = new GreenfootSound("018. Pick A Level, Any Level _ Dyna Blade Map Screen.mp3");
     
     public ComoJugarWorld()
     {    
@@ -45,6 +45,7 @@ public class ComoJugarWorld extends World
         Menu menu = new Menu();
         addObject(menu,522,525);
         
-        Greenfoot.playSound("018. Pick A Level, Any Level _ Dyna Blade Map Screen.mp3");
+        howToPlayMusic.setVolume(15);
+        howToPlayMusic.playLoop();
     }
 }

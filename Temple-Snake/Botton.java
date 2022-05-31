@@ -3,10 +3,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public abstract class Botton extends Actor
 {
-    
     public void act()
     {
-         GreenfootImage image = getImage();
+        GreenfootImage image = getImage();
         
         if(Greenfoot.mouseMoved(this)){
             image.setTransparency(150);
@@ -17,9 +16,7 @@ public abstract class Botton extends Actor
         if(Greenfoot.mouseClicked(this)){
             clicked();
         }
-
     }
     
     public abstract void clicked();
-
 }

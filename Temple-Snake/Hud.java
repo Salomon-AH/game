@@ -10,7 +10,7 @@ public class Hud extends Actor
     }
     
     public void refresh(){
-        getWorld().showText("Score: " + score, 400, 30);
+        getWorld().showText("Score: " + score, 300, 20);
     }
     
     public void setScore(int score){

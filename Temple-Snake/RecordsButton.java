@@ -3,9 +3,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class RecordsButton extends Botton
 {
-     public void clicked(){
+    public GreenfootSound recordsButtonSound = new GreenfootSound("SWAV_2.wav");
+    
+    public void clicked(){
             Greenfoot.setWorld(new RecordsWorld());
             
-            Greenfoot.playSound("SWAV_2.wav");
-        }
+            recordsButtonSound.setVolume(50);
+            recordsButtonSound.play();
+            MyWorld.menuMusic.stop();
+    }
 }

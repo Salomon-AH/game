@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class RecordsWorld extends World
 {
-
+    public static GreenfootSound recordsMusic = new GreenfootSound("02 - Courtroom Lobby _New Prelude.mp3");
     
     public RecordsWorld()
     {    
@@ -13,6 +13,7 @@ public class RecordsWorld extends World
         Menu menu = new Menu();
         addObject(menu,522,525);
         
-        Greenfoot.playSound("02 - Courtroom Lobby _New Prelude.mp3");
+        recordsMusic.setVolume(12);
+        recordsMusic.playLoop();
     }
 }

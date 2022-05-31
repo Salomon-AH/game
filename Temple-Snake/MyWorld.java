@@ -2,7 +2,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class MyWorld extends World
 {
-
+    public static GreenfootSound menuMusic = new GreenfootSound("L03 Environmental Noises.mp3");
+    
     public MyWorld()
     {    
         super(1044, 583, 1); 
@@ -22,6 +23,7 @@ public class MyWorld extends World
         RecordsButton recordsButton = new RecordsButton();
         addObject(recordsButton,544,375);
         
-        //Greenfoot.playSound("L03 Environmental Noises.mp3");
+        menuMusic.setVolume(10);
+        //menuMusic.play();
     }
 }

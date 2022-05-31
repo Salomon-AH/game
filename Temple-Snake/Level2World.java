@@ -1,16 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-
 public class Level2World extends World
 {
     private static final int WIDTH_WALL = 50;
     private static final int HEIGHT_WALL = 50;
+    public static GreenfootSound level2Music = new GreenfootSound("28 Sacred Somnom Woods.mp3");
         
     public Level2World()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1044, 583, 1);  
-        this.showText("Level 2", 150,150);
+        this.showText("Level 2", 150, 20);
         prepare();
     }
     
@@ -21,7 +20,7 @@ public class Level2World extends World
             pared = new Pared();
             addObject(pared, x, 20);
             pared = new Pared();
-            addObject(pared, x, 550);
+            addObject(pared, x, 560);
         }
         
         for(int y = 0; y <= 1000; y+= WIDTH_WALL){
@@ -38,18 +37,18 @@ public class Level2World extends World
         }
         
         Rana rana = new Rana();
-        addObject(rana, 0, 0);
+        addObject(rana, 200, 300);
         
         Hud hud = new Hud();
         addObject(hud, 0, 0);
         
+        extraPreparations();
+        
         Snake snake = new Snake(hud);
-        addObject(snake, 500, 120);
+        addObject(snake, 70, 70);
         
-        Bola bola = new Bola();
-        addObject(bola,200,300);
-        
-        //Greenfoot.playSound("28 Sacred Somnom Woods.mp3");
+        level2Music.setVolume(10);
+        level2Music.play();
     }
     
     private Pared addPared(int x, int y){
@@ -57,6 +56,23 @@ public class Level2World extends World
         
         addObject(pared,x,y);
         return pared;
+    }
+    
+    private Rana addItems(int x, int y){
+        Rana rana = new Rana();
+        
+        addObject(rana, x, y);
+        return rana;
+    }
+    
+    private void extraPreparations(){
+        Raton raton = new Raton();
+        addObject(raton, 0, 0);
+        
+        Oveja oveja = new Oveja();
+        addObject(oveja, 0, 0);
+        
+        addPared(20, 0);
     }
 }
 
