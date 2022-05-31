@@ -8,6 +8,7 @@ public class PlayButton extends Botton
         
             Greenfoot.setWorld(new PlayWorld());
             
+            Greenfoot.playSound("SWAV_2.wav");
         }
 
 }

@@ -47,6 +47,8 @@ public class PlayWorld extends World
         
         Bola bola = new Bola();
         addObject(bola,0,0);
+        
+        //Greenfoot.playSound("402 Undersea Ruins.mp3");
     }
     
     private Pared addPared(int x, int y){

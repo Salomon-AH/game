@@ -44,6 +44,8 @@ public class Level3World extends World
         
         Snake snake = new Snake(hud);
         addObject(snake, 500, 120);
+        
+        //Greenfoot.playSound("40 Dreamy Somnom Labyrinth.mp3");
     }
     
     private Pared addPared(int x, int y){

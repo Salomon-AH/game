@@ -48,6 +48,8 @@ public class Level2World extends World
         
         Bola bola = new Bola();
         addObject(bola,200,300);
+        
+        //Greenfoot.playSound("28 Sacred Somnom Woods.mp3");
     }
     
     private Pared addPared(int x, int y){
