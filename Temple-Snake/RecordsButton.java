@@ -10,6 +10,5 @@ public class RecordsButton extends Botton
             
             recordsButtonSound.setVolume(50);
             recordsButtonSound.play();
-            MyWorld.menuMusic.stop();
     }
 }

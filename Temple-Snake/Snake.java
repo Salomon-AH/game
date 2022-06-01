@@ -33,6 +33,7 @@ public class Snake extends Actor
             getWorld().removeObject(item);
             score += item.getScore();
             hud.setScore(score);
+            
             if(getWorld().getObjects(Raton.class).isEmpty()){
                 offsetX = 0;
                 offsetY = 0;

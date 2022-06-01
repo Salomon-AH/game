@@ -10,6 +10,6 @@ public class PlayButton extends Botton
             
             playButtonSound.setVolume(50);
             playButtonSound.play();
-            MyWorld.menuMusic.stop();
+            
     }
 }

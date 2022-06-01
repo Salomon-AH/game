@@ -10,6 +10,5 @@ public class ComoJugar extends Botton
             
             howToPlayButton.setVolume(50);
             howToPlayButton.play();
-            MyWorld.menuMusic.stop();
     }
 }
