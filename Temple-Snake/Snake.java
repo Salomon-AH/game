@@ -16,6 +16,9 @@ public class Snake extends Actor
     private int direction;
     private int score;
     private Hud hud;
+    private GameRecord record = new GameRecord();
+    private RecordsManager manager = new RecordsManager();
+    private SimpleTimer timer = new SimpleTimer();
     
     public Snake(Hud hud){
         this.hud = hud;
@@ -29,6 +32,11 @@ public class Snake extends Actor
     
     private void checkColissions(){
         Item item = (Item)getOneIntersectingObject(Item.class);
+        Guardia guardia = (Guardia)getOneIntersectingObject(Guardia.class);
+        GuardiaY guardiaY = (GuardiaY)getOneIntersectingObject(GuardiaY.class);
+        String name;
+        int time;
+        
         if(item != null){
             getWorld().removeObject(item);
             score += item.getScore();
@@ -57,9 +65,50 @@ public class Snake extends Actor
                 offsetY = 0;
                 getWorld().showText("YOU WIN", 525, 200);
                 
-                Menu menu = new Menu();
-                getWorld().addObject(menu,525,375);
+                name = Greenfoot.ask("Dime tu Nombre: ");
+                record.setPlayerName(name);
+                time = timer.millisElapsed();
+                record.setScore(time);
+                manager.save(record);
+                
+                Greenfoot.setWorld(new MyWorld());
             }
+        }
+        
+        if(guardia != null){
+            getWorld().removeObject(guardia);
+            offsetX = 0;
+            offsetY = 0;
+            getWorld().removeObject(guardia);
+            getWorld().showText("YOU LOSE", 525, 200);
+            Level3World.level3Music.stop();
+            Level2World.level2Music.stop();
+            PlayWorld.level1Music.stop();
+            
+            name = Greenfoot.ask("Dime tu Nombre: ");
+            record.setPlayerName(name);
+            time = timer.millisElapsed();
+            record.setScore(time);
+            manager.save(record);
+            
+            Greenfoot.setWorld(new MyWorld());
+        }
+        
+        if(guardiaY != null){
+            getWorld().removeObject(guardiaY);
+            offsetX = 0;
+            offsetY = 0;
+            getWorld().showText("YOU LOSE", 525, 200);
+            Level3World.level3Music.stop();
+            Level2World.level2Music.stop();
+            PlayWorld.level1Music.stop();
+            
+            name = Greenfoot.ask("Dime tu Nombre: ");
+            record.setPlayerName(name);
+            time = timer.millisElapsed();
+            record.setScore(time);
+            manager.save(record);
+            Greenfoot.setWorld(new MyWorld());
         }
     }
     

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Level
+comment1.params=
+comment1.target=Level()
+comment2.params=
+comment2.target=void\ generateLevel()
+comment3.params=x\ y
+comment3.target=Pared\ addPared(int,\ int)
+comment4.params=x\ y
+comment4.target=GuardiaY\ addEnemy(int,\ int)
+numComments=5

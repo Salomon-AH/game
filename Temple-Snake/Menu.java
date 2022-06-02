@@ -11,8 +11,5 @@ public class Menu extends Botton
         menuButton.play();
         ComoJugarWorld.howToPlayMusic.stop();
         RecordsWorld.recordsMusic.stop();
-        Level3World.level3Music.stop();
-        Level2World.level2Music.stop();
-        PlayWorld.level1Music.stop();
     }
 }
