@@ -4,8 +4,7 @@ public class Hud extends Actor
 {
     private int score;
     
-    public void act()
-    {
+    public void act(){
         refresh();
     }
     

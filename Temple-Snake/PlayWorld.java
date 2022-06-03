@@ -1,6 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-
 public class PlayWorld extends Level
 {
     public static GreenfootSound level1Music = new GreenfootSound("402 Undersea Ruins.mp3");

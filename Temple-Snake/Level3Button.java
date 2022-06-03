@@ -1,6 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-
 public class Level3Button extends Botton
 {
     public GreenfootSound level3ButtonSound = new GreenfootSound("SWAV_2.wav");

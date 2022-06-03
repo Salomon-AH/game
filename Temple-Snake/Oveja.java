@@ -3,11 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Oveja extends Item
 {
-    public void act()
-    {
-        // Add your action code here.
+    public void act(){
     }
-    
     
     public int getScore(){
         return 30;

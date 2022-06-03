@@ -57,7 +57,6 @@ public class Level2World extends Level
         addItems(570, 207);
         addItems(970, 396);
         
-        
         Hud hud = new Hud();
         addObject(hud, 0, 0);
         

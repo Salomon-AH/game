@@ -62,16 +62,6 @@ public class Level3World extends Level
         Guardia guardia2 = new Guardia();
         addObject(guardia2, 80, 207);
         
-        addEnemy(170, 207);
-        addEnemy(370, 207);
-        addEnemy(570, 207);
-        addEnemy(770, 207);
-        
-        addEnemy(270, 370);
-        addEnemy(470, 370);
-        addEnemy(670, 370);
-        addEnemy(870, 370);
-        
         level3Music.setVolume(10);
         level3Music.play();
     }
@@ -84,6 +74,16 @@ public class Level3World extends Level
     }
     
     private void extraPreparations(){
+        addEnemy(170, 207);
+        addEnemy(370, 207);
+        addEnemy(570, 207);
+        addEnemy(770, 207);
+        
+        addEnemy(270, 370);
+        addEnemy(470, 370);
+        addEnemy(670, 370);
+        addEnemy(870, 370);
+        
         Rana rana = new Rana();
         addObject(rana, 0, 0);
         
